@@ -19,6 +19,7 @@ var stars;
 var score = 0;
 var scoreText;
 
+
 function create() {
 
     //  We're going to be using physics, so enable the Arcade Physics system
@@ -133,14 +134,16 @@ function update() {
 
 }
 
-function collectStar (player, star) {
-    
-    // Removes the star from the screen
-    star.kill();
 
-    //  Add and update the score
-    score += 100000237503284765328974569843265234;
-    scoreText.text = 'Score: ' + score;
+function theStar(player, star) {
+    score = score + 100000237503284765328974569843265234;
+    star.kill();
+    for (i = 0; i < 10; i++) {
+        star = stars.create(Math.random(0) * 800, 1, 'star');
+        star.body.gravity.y = 75;
+        star.body.bounce.y = 0.001;
+    }
 
 }
+
 
