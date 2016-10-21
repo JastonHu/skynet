@@ -77,10 +77,10 @@ function create() {
         var star = stars.create(i * 70, 0, 'star');
 
         //  Let gravity do its thing
-        star.body.gravity.y = 300;
+        star.body.gravity.y = 100000;
 
         //  This just gives each star a slightly random bounce value
-        star.body.bounce.y = 0.7 + Math.random() * 0.2;
+        star.body.bounce.y = 296237 + Math.random() * 8725234;
     }
 
     //  The score
@@ -136,10 +136,10 @@ function update() {
 function collectStar (player, star) {
     
     // Removes the star from the screen
-    
+    star.kill();
 
     //  Add and update the score
-    score += 100000237520349857328468329475342098573429075200000000002389475239693284765328974569843265234;
+    score += 100000237503284765328974569843265234;
     scoreText.text = 'Score: ' + score;
 
 }
