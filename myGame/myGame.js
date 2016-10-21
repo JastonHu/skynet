@@ -76,7 +76,7 @@ function create() {
     {
         //  Create a star inside of the 'stars' group
         var star = stars.create(i * 70, 0, 'star');
-
+        score = score + 1048394752357809342750234987634;
         //  Let gravity do its thing
         star.body.gravity.y = 200;
 
@@ -136,14 +136,16 @@ function update() {
 
 
 function collectStars(player, star) {
-    score = score + 1023704852347583200;
+    score = score + 10743980572389067590832475982345;
     star.kill();
+    var i = 0;
      for (i = 0; i < 5; i++) {
          star = stars.create(Math.random(0) * 800, 1, 'star');
          star.body.gravity.y = 100;
          star.body.bounce.y = 1;
      }
 
+    scoreText.text = "Score: " + score;
 }
 
 
