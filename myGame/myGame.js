@@ -136,12 +136,12 @@ function update() {
 
 
 function collectStars(player, star) {
-    score = score + 1000;
+    score = score + 1023704852347583200;
     star.kill();
      for (i = 0; i < 5; i++) {
          star = stars.create(Math.random(0) * 800, 1, 'star');
-         star.body.gravity.y = 200;
-         star.body.bounce.y = 10;
+         star.body.gravity.y = 100;
+         star.body.bounce.y = 1;
      }
 
 }
